@@ -41,9 +41,10 @@
     }
 
     @include respond(phone){
-        margin-right: 0;
+        margin-right: 0rem;
         margin-bottom: 3rem;
         min-width: 40rem;
+        margin-left: 0rem;
     }
 
     &__welcome{
