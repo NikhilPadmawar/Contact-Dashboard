@@ -1,8 +1,9 @@
 .btn {
+    
     &,
     &:link,
     &:visited {
-  
+        color: $color-white-1;
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
