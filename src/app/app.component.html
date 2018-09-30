@@ -1,0 +1,105 @@
+<div class="container">
+    <header class="header">
+        <h2 class="logo">NP</h2>
+
+        <div class="search ml-5">
+            <input type="text" [(ngModel)]="searchText" class="search__input" placeholder="Search contacts">
+            <button class="search__button">
+                <svg class="search__icon">
+                    <use xlink:href="src/assets/img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="user-nav">
+            <div class="user-nav__user">
+                <img src="src/assets/img/user.png" alt="User photo" class="user-nav__user-photo">
+                <span class="user-nav__user-name">Nikhil</span>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <nav class="sidebar">
+            <div class="contacts">
+                <h3 class="heading-tertiary">
+                    <i class="fa fa-address-card mr-3"></i>My Contacts</h3>
+                <div class="scrollbar" id="style-2">
+                    <div class="contacts__adjust" *ngFor="let personDetails of contactDetails | filter : searchText">
+                        <div class="contacts__list mb-4" (click)="getPersonDetails(personDetails)">
+                            <img src="{{personDetails.img}}" alt="contacts 1" class="contacts__img">
+                            <div class="contacts__details">
+                                <h4 class="heading-fourth heading-fourth--light">{{personDetails.name}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="legal">
+                &copy; 2018 by Nikhil. All rights reserved.
+            </div>
+        </nav>
+
+        <div class="subContainer">
+            <div class="description__welcome" *ngIf="show">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">
+                        WeConnect
+                    </span>
+                    <span class="heading-primary--sub">
+                        Search.Explore.Discover.
+                    </span>
+                </h1>
+                <h2 class="heading-secondary">
+                    Click on the contacts to explore more!
+                </h2>
+            </div>
+
+            <div class="description scrollbar" id="style-1" *ngIf="!show">
+                <div class="card">
+                    <div class="card-img-block">
+                        <img class="card-img-top mr-3" src="{{individual?.img}}" alt="Card image cap">
+                    </div>
+                    <div class="card-btn">
+                        <button type="button" class="btn btn-primary mr-2">Send Message</button>
+                        <br>
+                        <section id="like" class="rating">
+                            <input type="radio" [checked]="rating===5" id="heart_5" value="5" />
+                            <label for="heart_5" title="Five">&#10084;</label>
+                            <input type="radio" [checked]="rating===4" id="heart_4" value="4" />
+                            <label for="heart_4" title="Four">&#10084;</label>
+                            <input type="radio" [checked]="rating===3" id="heart_3" value="3" />
+                            <label for="heart_3" title="Three">&#10084;</label>
+                            <input type="radio" [checked]="rating===2" id="heart_2" value="2" />
+                            <label for="heart_2" title="Two">&#10084;</label>
+                            <input type="radio" [checked]="rating===1" id="heart_1" value="1" />
+                            <label for="heart_1" title="One">&#10084;</label>
+                        </section>
+                    </div>
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">{{individual?.name}}</h5>
+                        <p class="card-paragraph">{{individual?.Description}}</p>
+
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Likes</th>
+                                    <th scope="col">Dislikes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <tr *ngFor="let i of likes">{{i}}</tr>
+                                    </td>
+                                    <td>
+                                        <tr *ngFor="let j of dislikes">{{j}}</tr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

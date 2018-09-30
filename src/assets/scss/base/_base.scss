@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12px, 12/16=75%
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-grey-dark-1;
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-grey-dark-4, 0.8),
+        rgba($color-grey-dark-5, 0.8)),
+    url(src/assets/img/technology.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 80vh;
+
+   
+    @include respond(tab-land){
+        background-image:none;     
+    }
+    @include respond(tab-port){
+        background-image:none;
+        margin-bottom: 0rem;
+    }
+    @include respond(phone){
+        background-image:none;
+    }
+    
+}
+
+.scrollbar {
+    height: 39rem;
+     overflow-y: auto;  
+ }
+ 
+ 
+ #style-1::-webkit-scrollbar {
+     width: 5px;
+     background-color: $color-white-1;
+ } 
+ #style-1::-webkit-scrollbar-thumb {
+     background-color: $color-black-1;
+ }
+ 
+ #style-2::-webkit-scrollbar {
+     width: 5px;
+     background-color: transparent;
+ }
+
+ .content {
+    display: flex;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+    }
+}
+
+.container {
+    max-width: 120rem;
+    margin: 1.5rem auto;
+    background-color: $color-grey-light-1;
+    box-shadow: $shadow-dark;
+    padding: 0;
+    min-height:  52rem;
+
+    @include respond(big-desktop) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}

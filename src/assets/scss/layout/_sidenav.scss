@@ -1,0 +1,64 @@
+.legal {
+    font-size: 1.2rem;
+    color: $color-grey-light-4;
+    text-align: center;
+    padding: 2.5rem;
+    cursor: context-menu;
+
+    @include respond(tab-port){
+        display: none;
+    }
+}
+.sidebar {
+    background-color: $color-green-light-5;  
+    color: $color-white-1;
+    flex: 0 0 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height:  52rem;
+
+
+    @include respond(phone){
+        min-height: 30rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+.contacts {
+    padding: 3rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+
+
+    &__adjust{
+        cursor: pointer;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+        margin-right: 4.5rem;
+        margin-left: 2rem;
+
+   &:hover{
+       color: $color-grey-dark-3;
+   }
+      
+
+    }
+
+    &__img {
+        width: 6rem;
+        border-radius: 50%;
+        display: block;
+    }
+
+}

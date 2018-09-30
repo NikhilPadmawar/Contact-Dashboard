@@ -1,0 +1,70 @@
+.subContainer {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 2rem 4.5rem 2rem 4.5rem;
+    background-color: $color-grey-light-1;
+    border-bottom: $line;
+
+    @include respond(tab-port){
+        padding: 3rem;
+        max-width: 85rem;
+    }
+
+    @include respond(phone){
+        flex-direction: column;
+        min-width: 40rem;
+    }
+ 
+}
+
+.description {
+    background-color: $color-grey-light-3;
+    box-shadow: $shadow-light;
+    padding: 3rem;
+    flex: 0 0 115%;
+    margin-right: 4.5rem;
+    min-height: 52rem;
+
+
+    @include respond(tab-land){
+        padding: 2rem;
+        margin-right: 3rem;
+        max-width: 75rem;
+        min-height: 55rem;
+    }
+
+    @include respond(tab-port){
+        padding: 2rem;
+        margin-left: 3rem;
+        max-width: 110rem;
+        min-height: 55rem;
+    }
+
+    @include respond(phone){
+        margin-right: 0;
+        margin-bottom: 3rem;
+        min-width: 40rem;
+    }
+
+    &__welcome{
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-grey-dark-4, 0.8),
+            rgba($color-grey-dark-5, 0.8)),
+        url(src/img/technology.jpg);
+        background-size: cover;
+        background-position: top;
+        min-height: 52rem;
+
+        @include respond(tab-port){
+            padding: 2rem;
+            margin-left: 2rem;
+            min-width: 95rem;
+        }
+
+        @include respond(phone){
+            min-width: 40rem;
+        }
+    }
+
+}

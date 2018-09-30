@@ -1,0 +1,53 @@
+.card
+{
+    background-image: linear-gradient(
+    to right bottom,
+    rgba($color-grey-dark-4, 0.8),
+    rgba($color-grey-dark-5, 0.8)),
+    url(src/assets/img/technology.jpg);
+    margin-top:20px;
+
+    &-btn{
+        padding:7px 20px;
+        margin-top: -20%;
+        margin-left: 45%;
+    }
+    
+    &-img-top{
+        width: 25%;
+        border-radius:3px;
+        box-shadow:0 0 10px rgba(255, 255, 255, 0.63);
+    }
+
+    &-img-block{
+        width: 91%;
+        margin: 0 auto;
+        position: relative;
+        top: -20px;
+    }
+
+    &-body{
+        margin-top: 12%;
+        margin-left: 3%;
+        color: $color-white-1;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    &-paragraph {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: $color-white-1;
+        font-weight: 400;
+        max-width: 60rem;
+    } 
+
+    &-title{
+        color:$color-yellow-light-1;
+        font-weight:600;
+        font-size: 2rem;
+    }
+
+}
+
+
