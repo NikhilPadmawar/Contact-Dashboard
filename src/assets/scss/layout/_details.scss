@@ -64,6 +64,7 @@
 
         @include respond(phone){
             min-width: 40rem;
+            margin-left: 0rem;
         }
     }
 

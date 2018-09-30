@@ -29,7 +29,7 @@
    }
   
    @include respond(phone){
-    font-size: 3rem;
+    font-size: 2rem;
    }
    
 }
@@ -49,7 +49,7 @@
   
    @include respond(phone){
     letter-spacing: 1rem;
-    font-size: 1.5rem;
+    font-size: 0.7rem;
    }
 }
 }
@@ -74,8 +74,8 @@
        }
 
     @include respond(phone){
-        font-size: 1.5rem;
-        margin: 10rem 12rem 0rem 10rem;
+        font-size: 1.3rem;
+        margin: 10rem 5rem 0rem 7rem;
        }
 }
 .heading-tertiary

@@ -6,7 +6,14 @@
     unicode-bidi: bidi-override;
     direction: rtl;
     margin-left: 2%;
+
+    @include respond(phone){
+      top: -28rem;
+      left: 14rem;
+    }
+    
   }
+
   .rating:not(:checked) > input {
     display: none;
   }

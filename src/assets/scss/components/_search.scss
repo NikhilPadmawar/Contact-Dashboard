@@ -5,9 +5,12 @@
     align-items: center;
     justify-content: center;
 
-    @media only screen and (max-width: $bp-smallest) {
+
+    @include respond(phone){
         order: 1;
-        flex: 0 0 100%;
+        flex: 0 0 45%;
+        margin-left: 10rem !important;
+        margin-top: -11rem;
         background-color: $color-grey-light-2;
     }
 
